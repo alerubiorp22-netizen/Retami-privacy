@@ -20,7 +20,7 @@ Retami ("la app", "nosotros") es una aplicación móvil para retos de fitness en
 **(a) Datos que tú nos proporcionas directamente:**
 
 - **Cuenta:** email y contraseña al registrarte. La contraseña se almacena cifrada (hash) en nuestro proveedor de autenticación; nadie del equipo de Retami puede leerla.
-- **Perfil:** nombre de usuario (username), nombre a mostrar (display name), foto de perfil opcional, bio opcional, fecha de nacimiento (obligatoria, para verificar edad mínima de 16 años), peso opcional, zona horaria.
+- **Perfil:** nombre de usuario (username), nombre a mostrar (display name), foto de perfil opcional, bio opcional, fecha de nacimiento (obligatoria, para verificar edad mínima de 16 años), zona horaria.
 - **Contenido:** mensajes de chat de grupo, mensajes directos, fotos de portada de tus grupos, fotos y descripciones de actividades que registras, reglas de los grupos que creas, reacciones a mensajes y actividades.
 
 **(b) Datos que se generan automáticamente al usar la app:**
