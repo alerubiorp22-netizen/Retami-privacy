@@ -1,114 +1,294 @@
----
-title: Política de Privacidad de Retami
-description: Política de privacidad de la aplicación móvil Retami.
----
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — Retami</title>
+  <meta name="description" content="Política de privacidad de Retami: qué datos recogemos, para qué los usamos, y cómo borrar tu cuenta.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0a'/%3E%3Ctext x='50' y='72' font-family='system-ui,sans-serif' font-size='62' font-weight='900' text-anchor='middle' fill='%23e8ff00'%3ER%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-card: #111;
+      --border: #252525;
+      --text-primary: #f0f0f0;
+      --text-secondary: #b5b5b5;
+      --text-muted: #777;
+      --accent: #e8ff00;
+      --accent-low: rgba(232, 255, 0, 0.1);
+      --accent-mid: rgba(232, 255, 0, 0.2);
+      --max-w: 760px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: var(--accent); text-decoration: none; transition: opacity 0.15s; }
+    a:hover { opacity: 0.7; }
 
-# Política de Privacidad de Retami
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(232,255,0,0.05), transparent 50%),
+        linear-gradient(rgba(232,255,0,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232,255,0,0.015) 1px, transparent 1px);
+      background-size: 100% 100%, 60px 60px, 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-**Última actualización:** 6 de junio de 2026
+    /* NAV */
+    header.nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      background: rgba(10,10,10,0.7);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 18px; font-weight: 900; letter-spacing: -0.5px;
+      color: var(--text-primary);
+    }
+    .logo:hover { opacity: 1; }
+    .logo-mark {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--accent); color: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 900; line-height: 1;
+    }
+    .nav-back {
+      padding: 8px 14px; font-size: 14px; color: var(--text-secondary);
+      border-radius: 8px;
+    }
+    .nav-back:hover { color: var(--text-primary); opacity: 1; background: var(--bg-card); }
 
-Retami ("la app", "nosotros") es una aplicación móvil para retos de fitness en grupo desarrollada por **Alejandro Rubio** ("el desarrollador"). Esta política explica qué datos recogemos, por qué los recogemos, con quién los compartimos y cómo puedes ejercer tus derechos sobre ellos.
+    /* ARTICLE */
+    article {
+      position: relative; z-index: 1;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 70px 24px 80px;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; color: var(--accent);
+      letter-spacing: 2px; padding: 6px 12px;
+      background: var(--accent-low); border: 1px solid var(--accent-mid);
+      border-radius: 99px; margin-bottom: 22px;
+    }
+    .eyebrow::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 8px var(--accent);
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 46px);
+      font-weight: 900; line-height: 1.08; letter-spacing: -1.2px;
+      margin-bottom: 14px;
+    }
+    .meta {
+      color: var(--text-muted); font-size: 13px;
+      letter-spacing: 0.5px; margin-bottom: 40px;
+      text-transform: uppercase; font-weight: 700;
+    }
+    .intro {
+      font-size: 17px; color: var(--text-secondary);
+      margin-bottom: 50px; padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .intro strong { color: var(--text-primary); }
 
-## 1. Responsable del tratamiento
+    h2 {
+      font-size: clamp(22px, 3vw, 26px);
+      font-weight: 800; letter-spacing: -0.4px;
+      margin-top: 48px; margin-bottom: 14px;
+      color: var(--text-primary);
+      display: flex; align-items: baseline; gap: 10px;
+    }
+    h2::before {
+      content: "§";
+      color: var(--accent);
+      font-size: 0.75em;
+      font-weight: 900;
+    }
+    h3 {
+      font-size: 16px; font-weight: 700;
+      margin-top: 24px; margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+    p, ul, ol {
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+      font-size: 15.5px;
+    }
+    ul, ol { padding-left: 22px; }
+    li { margin-bottom: 8px; }
+    li::marker { color: var(--accent); }
+    strong { color: var(--text-primary); font-weight: 700; }
 
-- **Responsable:** Alejandro Rubio
-- **Contacto:** [privacy@retami.app](mailto:privacy@retami.app)
-- **Ámbito:** Esta política aplica a todos los usuarios de la app Retami en iOS, Android y web.
+    /* CALLOUT */
+    .callout {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin: 28px 0;
+    }
+    .callout p { margin-bottom: 0; color: var(--text-primary); }
 
-## 2. Datos que recogemos
+    /* FOOTER */
+    footer {
+      position: relative; z-index: 1;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 30px 24px 60px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13px;
+      display: flex; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    footer a { color: var(--text-secondary); }
+    footer a:hover { color: var(--accent); }
 
-**(a) Datos que tú nos proporcionas directamente:**
+    @media (max-width: 600px) {
+      .nav-inner { padding: 12px 18px; }
+      article { padding: 40px 20px 60px; }
+      h2 { margin-top: 36px; }
+      footer { padding: 24px 20px 50px; flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
 
-- **Cuenta:** email y contraseña al registrarte. La contraseña se almacena cifrada (hash) en nuestro proveedor de autenticación; nadie del equipo de Retami puede leerla.
-- **Perfil:** nombre de usuario (username), nombre a mostrar (display name), foto de perfil opcional, bio opcional, fecha de nacimiento (obligatoria, para verificar edad mínima de 16 años), zona horaria.
-- **Contenido:** mensajes de chat de grupo, mensajes directos, fotos de portada de tus grupos, fotos y descripciones de actividades que registras, reglas de los grupos que creas, reacciones a mensajes y actividades.
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="https://retami.app">
+        <span class="logo-mark">R</span>
+        <span>Retami</span>
+      </a>
+      <a class="nav-back" href="https://retami.app">← Volver</a>
+    </div>
+  </header>
 
-**(b) Datos que se generan automáticamente al usar la app:**
+  <article>
+    <span class="eyebrow">POLÍTICA DE PRIVACIDAD</span>
+    <h1>Tus datos, en claro.</h1>
+    <p class="meta">Última actualización · 9 de junio de 2026</p>
 
-- **Identificadores:** un ID único interno por cada cuenta (UUID generado por Supabase Auth, no es público).
-- **Token de notificaciones push:** un identificador del dispositivo proporcionado por Apple (APNs) o Google (FCM) a través de Expo. Lo usamos exclusivamente para enviarte notificaciones de la app.
-- **Última conexión** ("activo hace X minutos"): timestamp que se actualiza al abrir la app, visible para otros usuarios.
-- **Histórico de actividades:** las actividades que registras (nombre, puntos, foto opcional), asociadas a tu cuenta y al grupo correspondiente.
+    <p class="intro">
+      Retami es una app de retos en grupo desarrollada por <strong>Alejandro Rubio</strong>.
+      Aquí te explicamos qué datos recogemos y para qué, sin letra pequeña ni tecnicismos.
+      Para dudas: <a href="mailto:privacy@retami.app">privacy@retami.app</a>.
+    </p>
 
-**(c) Datos que NO recogemos:**
+    <h2>Qué datos recogemos</h2>
+    <p>Solo lo necesario para que la app funcione:</p>
+    <ul>
+      <li><strong>Cuenta:</strong> email y contraseña (cifrada — nadie en Retami puede verla).</li>
+      <li><strong>Perfil:</strong> nombre de usuario, nombre a mostrar, foto opcional, bio opcional, fecha de nacimiento, zona horaria.</li>
+      <li><strong>Contenido que tú creas:</strong> mensajes, actividades, fotos, reglas de los grupos.</li>
+      <li><strong>Token de notificaciones</strong> del dispositivo, solo para enviarte avisos de la app.</li>
+      <li><strong>Última conexión</strong>, para mostrar "activo hace X minutos" a tu grupo.</li>
+    </ul>
 
-- Tu ubicación (ni precisa ni aproximada).
-- Datos de tu libreta de contactos.
-- Tu historial de navegación o de búsqueda fuera de la app.
-- Información financiera, de pago, ni de tarjetas.
-- Datos sensibles según el RGPD (origen étnico, religión, orientación sexual, salud médica, biometría).
-- Datos para perfiles publicitarios o tracking de terceros.
+    <h2>Lo que NO recogemos</h2>
+    <ul>
+      <li>Tu ubicación.</li>
+      <li>Tu agenda de contactos.</li>
+      <li>Información financiera o de pago.</li>
+      <li>Datos sensibles (salud, religión, política, orientación sexual, biometría).</li>
+      <li>Nada para perfiles publicitarios ni para tracking de terceros.</li>
+    </ul>
+    <div class="callout">
+      <p><strong>No vendemos tus datos. No los cedemos a anunciantes.</strong> Punto.</p>
+    </div>
 
-## 3. Fines del tratamiento
+    <h2>Para qué los usamos</h2>
+    <ul>
+      <li>Hacer funcionar la app: tu cuenta, tus grupos, el ranking, los mensajes, las notificaciones.</li>
+      <li>Seguridad y moderación: detectar abusos, gestionar reportes.</li>
+      <li>Cumplir obligaciones legales cuando proceda.</li>
+    </ul>
 
-Usamos tus datos exclusivamente para:
+    <h2>Con quién los compartimos</h2>
+    <p>
+      Usamos proveedores técnicos para que la app funcione (autenticación, almacenamiento, envío de notificaciones push).
+      Procesan tus datos <strong>en nuestro nombre</strong> bajo contrato, no para sus propios fines, y no
+      pueden usarlos para publicidad.
+    </p>
 
-- **Hacer funcionar la app:** crear y mantener tu cuenta, mostrarte tus grupos, registrar actividades, contar puntos, mostrar el ranking, entregar mensajes y notificaciones.
-- **Comunicación esencial:** enviarte notificaciones push relacionadas con tu actividad (alguien te ha seguido, hay un mensaje en tu grupo, etc.). Puedes desactivarlas en tus ajustes.
-- **Seguridad y moderación:** detectar abusos, gestionar reportes de usuarios, prevenir cuentas duplicadas o de menores de 16 años.
-- **Cumplir obligaciones legales:** responder a requerimientos legítimos de autoridades cuando proceda.
+    <h2>Cuánto los guardamos</h2>
+    <ul>
+      <li><strong>Mientras tu cuenta esté activa:</strong> conservamos tu perfil y contenido.</li>
+      <li><strong>Si borras tu cuenta:</strong> eliminación inmediata e irreversible. Sin copias.</li>
+      <li><strong>Fotos de actividad:</strong> caducan automáticamente a las 36 horas.</li>
+      <li><strong>Token de notificaciones:</strong> caduca por sí solo al dejar de usar la app.</li>
+    </ul>
 
-**No usamos tus datos para publicidad, ni los vendemos ni cedemos a terceros para fines comerciales.**
+    <h2>Tus derechos</h2>
+    <p>
+      Tienes derecho a acceder, rectificar, borrar, limitar y oponerte al tratamiento de tus
+      datos, y a recibirlos en formato portable.
+    </p>
 
-## 4. Base legal (RGPD)
+    <h3>Borrar tu cuenta desde la app</h3>
+    <p>
+      <strong>Perfil → Editar perfil → Borrar mi cuenta.</strong>
+      Es inmediato e irreversible: se borra todo (cuenta, perfil, mensajes, conversaciones,
+      actividades y fotos). Los grupos que tú hayas creado siguen existiendo para los demás miembros,
+      pero pasan a no tener creador asignado.
+    </p>
 
-- **Consentimiento** (art. 6.1.a RGPD): para crear tu cuenta, registrar actividades, enviar mensajes.
-- **Ejecución de contrato** (art. 6.1.b RGPD): el uso de la app requiere procesar tus datos para entregarte el servicio.
-- **Interés legítimo** (art. 6.1.f RGPD): seguridad, prevención de fraude, mantenimiento del servicio.
-- **Cumplimiento legal** (art. 6.1.c RGPD): respuesta a autoridades cuando aplique.
+    <h3>Para el resto de solicitudes</h3>
+    <p>
+      Escríbenos a <a href="mailto:privacy@retami.app">privacy@retami.app</a> y te respondemos en
+      un máximo de 30 días. Si crees que no respetamos tus derechos puedes reclamar a la
+      <a href="https://www.aepd.es" target="_blank" rel="noopener">Agencia Española de Protección de Datos</a>.
+    </p>
 
-## 5. Con quién compartimos tus datos (proveedores)
+    <h2>Menores</h2>
+    <p>
+      Retami requiere <strong>edad mínima de 16 años</strong>. Verificamos la fecha de
+      nacimiento al registrarse. Si detectamos un menor de 16 años, eliminamos la cuenta.
+    </p>
 
-Retami se apoya en infraestructura de terceros para funcionar. Estos proveedores **procesan datos en nuestro nombre** y bajo nuestro contrato; no tienen permiso para usarlos para sus propios fines:
+    <h2>Seguridad</h2>
+    <ul>
+      <li>Las contraseñas se guardan cifradas. Nadie las ve, ni siquiera nosotros.</li>
+      <li>Toda la comunicación entre app y servidor va por HTTPS.</li>
+      <li>El acceso a la base de datos está restringido: cada cuenta solo lee lo suyo y lo de sus grupos.</li>
+      <li>Las fotos de actividad son de visualización única y caducan en 36h.</li>
+    </ul>
 
-- **Supabase** ([supabase.com](https://supabase.com)) — base de datos, autenticación y almacenamiento de archivos. Servidores ubicados en la Unión Europea (Irlanda). Política de privacidad: [supabase.com/privacy](https://supabase.com/privacy)
-- **Expo / Expo Push Service** ([expo.dev](https://expo.dev)) — servicio que enruta nuestras notificaciones push hacia los servicios de Apple (APNs) y Google (FCM). Política: [expo.dev/privacy](https://expo.dev/privacy)
-- **Apple Push Notification service (APNs)** y **Firebase Cloud Messaging (FCM)** — para entrega física de la notificación al dispositivo. Solo reciben el token del dispositivo y el contenido de la notificación.
+    <h2>Cambios en esta política</h2>
+    <p>
+      Si la actualizamos, te avisaremos por email o desde la app antes de que el cambio entre en vigor.
+    </p>
 
-No cedemos tus datos a anunciantes, data brokers, ni redes sociales.
+  </article>
 
-## 6. Conservación de datos
+  <footer>
+    <div>© 2026 Retami · Alejandro Rubio</div>
+    <div>
+      <a href="mailto:privacy@retami.app">privacy@retami.app</a> ·
+      <a href="mailto:support@retami.app">support@retami.app</a>
+    </div>
+  </footer>
 
-- **Datos de cuenta y contenido:** mientras tu cuenta esté activa. Al solicitar el borrado, la eliminación es inmediata y no conservamos ninguna copia de tus datos personales (excepto, en algunos casos, registros de auditoría sobre acciones de moderación de grupos que llevaste a cabo, anonimizados sin que puedan vincularse a ti).
-- **Fotos de actividad:** caducan automáticamente a las 36 horas desde su subida, hayan sido vistas o no. Después se borran definitivamente del almacenamiento.
-- **Mensajes:** persisten mientras los grupos / conversaciones existan. Si un miembro borra un mensaje, se marca como borrado pero el evento se conserva en el log de auditoría del grupo.
-- **Tokens de notificación:** se actualizan en cada login. Si dejas de usar la app, el token caduca por inactividad en APNs/FCM tras semanas.
-- **Logs de auditoría:** acciones administrativas en grupos (vetos, expulsiones, cambios de rol) se conservan indefinidamente como evidencia de moderación.
-
-## 7. Tus derechos (RGPD)
-
-Tienes derecho a:
-
-- **Acceso:** saber qué datos tuyos tenemos.
-- **Rectificación:** corregir datos incorrectos.
-- **Supresión** ("derecho al olvido"): pedirnos que borremos tu cuenta y datos asociados.
-- **Limitación del tratamiento.**
-- **Portabilidad:** recibir tus datos en formato estructurado.
-- **Oposición.**
-
-**Borrado de cuenta desde la app:** puedes solicitar el borrado de tu cuenta desde **Perfil → Editar perfil → Borrar mi cuenta**. La eliminación es **definitiva, inmediata e irreversible**. Se borran todos tus datos sin dejar rastro: cuenta de autenticación, perfil, mensajes de grupo, conversaciones privadas, actividades registradas, fotos y reacciones. Quienes tuvieran conversaciones contigo verán huecos donde estaban tus mensajes. Los grupos que tú hayas creado siguen existiendo (los demás miembros continúan usándolos) pero pasan a no tener creador asignado.
-
-Para otras solicitudes escríbenos a [privacy@retami.app](mailto:privacy@retami.app). Responderemos en un plazo máximo de 30 días.
-
-Si crees que no hemos respetado tus derechos puedes reclamar a la **Agencia Española de Protección de Datos** ([aepd.es](https://www.aepd.es)).
-
-## 8. Menores
-
-Retami **requiere edad mínima de 16 años**. Verificamos la fecha de nacimiento durante el onboarding y la mantenemos inmutable después. Si detectamos que un menor de 16 años se ha registrado, eliminaremos su cuenta.
-
-## 9. Seguridad
-
-- Las contraseñas se almacenan únicamente como hash bcrypt vía Supabase Auth.
-- La sesión de auth en el dispositivo se guarda cifrada en el llavero seguro del sistema (`expo-secure-store`: iOS Keychain, Android EncryptedSharedPreferences).
-- Comunicación cliente-servidor exclusivamente por HTTPS.
-- Las consultas a la base de datos están protegidas por Row Level Security: cada usuario solo puede leer y modificar sus propios datos y los de los grupos donde es miembro.
-- Las fotos de actividad son **view-once** y caducan en 36h.
-
-## 10. Cambios en esta política
-
-Si actualizamos esta política, te lo notificaremos por email o a través de la app antes de que los cambios entren en vigor. Mantenemos versiones anteriores accesibles bajo solicitud.
-
-## 11. Contacto
-
-- **Privacidad:** [privacy@retami.app](mailto:privacy@retami.app)
-- **Soporte:** [support@retami.app](mailto:support@retami.app)
+</body>
+</html>
