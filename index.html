@@ -65,10 +65,8 @@
     }
     .logo:hover { opacity: 1; }
     .logo-mark {
-      width: 32px; height: 32px; border-radius: 8px;
-      background: var(--accent); color: var(--bg);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; font-weight: 900; line-height: 1;
+      width: 36px; height: 36px; border-radius: 9px;
+      object-fit: cover; flex-shrink: 0;
     }
     .nav-back {
       padding: 8px 14px; font-size: 14px; color: var(--text-secondary);
@@ -177,11 +175,11 @@
 
   <header class="nav">
     <div class="nav-inner">
+      <a class="nav-back" href="https://retami.app">← Volver</a>
       <a class="logo" href="https://retami.app">
-        <span class="logo-mark">R</span>
+        <img src="https://retami.app/logo.png" alt="Retami" class="logo-mark">
         <span>Retami</span>
       </a>
-      <a class="nav-back" href="https://retami.app">← Volver</a>
     </div>
   </header>
 
